@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Pneumonia Detection</title>
+</head>
+<body>
+    <h1>Pneumonia Detection from Chest X-Ray</h1>
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="image" required>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+        <h2>Prediction: {{ prediction }}</h2>
+        <img src="{{ image }}" alt="X-Ray" width="300">
+    {% endif %}
+</body>
+</html>
+cl
